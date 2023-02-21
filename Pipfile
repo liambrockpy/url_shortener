@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-cors = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+qrcode = {extras = ["pil"], version = "*"}
+flask-wtf = "*"
+flask = {extras = ["async"], version = "*"}
+
+[dev-packages]
+pytest = "*"
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+dev = "flask --app url_short.py --debug run"
+test = "pytest ./app"
