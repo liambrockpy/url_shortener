@@ -14,7 +14,7 @@ window.onclick = function (event) {
 }
 
 function closeModal() {
-	let qr = document.querySelector(".qrcode")
+	let qr = document.querySelector(".qr-div")
 	modalContent.removeChild(qr)
 	modal.style.display = "none"
 }
@@ -23,15 +23,35 @@ if (document.querySelector(".qr-button")) {
 	let qrBtns = document.querySelectorAll(".qr-button")
 	qrBtns.forEach((el) =>
 		el.addEventListener("click", (e) => {
-			let shortArr =
-				e.currentTarget.parentNode.parentNode.children[0].children[2].textContent.split(
-					"/"
-				)
+			let longText =
+				e.currentTarget.parentNode.parentNode.children[0].children[1]
+					.textContent
+			let shortText =
+				e.currentTarget.parentNode.parentNode.children[0].children[2]
+					.textContent
+			let shortArr = shortText.split("/")
 			let short = shortArr[shortArr.length - 1]
+
+			let parentDiv = document.createElement("div")
+			parentDiv.className = "qr-div"
+
+			let qrLong = document.createElement("div")
+			qrLong.className = "qr-long"
+			qrLong.textContent = longText
+
+			let qrShort = document.createElement("div")
+			qrShort.className = "qr-short"
+			qrShort.textContent = shortText
+
 			let qrImg = document.createElement("img")
 			qrImg.className = "qrcode"
 			qrImg.src = `/static/images/qrcode-${short}.png`
-			modalContent.appendChild(qrImg)
+
+			parentDiv.appendChild(qrShort)
+			parentDiv.appendChild(qrImg)
+			parentDiv.appendChild(qrLong)
+
+			modalContent.appendChild(parentDiv)
 			modal.style.display = "block"
 		})
 	)
