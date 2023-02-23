@@ -8,8 +8,11 @@ flask-cors = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 qrcode = {extras = ["pil"], version = "*"}
-flask-wtf = "*"
 flask = {extras = ["async"], version = "*"}
+flask-wtf = "*"
+gunicorn = "*"
+python-dotenv = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest = "*"
