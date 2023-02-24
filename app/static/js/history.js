@@ -39,7 +39,7 @@ history &&
 		linkShort.id = index
 		linkShort.className = "short-url"
 		linkShort.textContent = link.short
-		linkShort.href = `http://${link.short}`
+		linkShort.href = `https://${link.short}`
 		linkShort.target = "_blank"
 
 		let svgDiv = document.createElement("span")
