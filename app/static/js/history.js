@@ -1,5 +1,4 @@
 let history = JSON.parse(localStorage.getItem("links"))
-let link = document.querySelector(".short-url")
 let historyDiv = document.querySelector(".history-modal")
 
 if (document.querySelector(".result-modal")) {
