@@ -1,13 +1,14 @@
 let history = JSON.parse(localStorage.getItem("links"))
-let link = document.querySelector(".short-url")
 let historyDiv = document.querySelector(".history-modal")
 
-if (link) {
-	let long = link.getAttribute("href")
-	let short = link.textContent
+if (document.querySelector(".result-modal")) {
+	let resultModal = document.querySelector(".result-modal")
+	let long = resultModal.querySelector(".long-url").textContent
+	let short = resultModal.querySelector(".short-url").textContent
+
 	let h = JSON.parse(localStorage.getItem("links"))
 	if (h) {
-		if (h[0]["short"] != link.textContent) {
+		if (h[0]["short"] != short) {
 			h.unshift({ long: long, short: short })
 		}
 	} else {
