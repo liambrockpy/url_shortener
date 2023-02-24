@@ -1,13 +1,15 @@
-# URL Shortener App
+# rejus.link (A URL shortener)
 
 | Collaborators                                 |
 | --------------------------------------------- |
 | [liambrockpy](github.com/liambrockpy) &#9758; |
 | [JLP2000](github.com/JLP2000) &#9758;         |
 
-Built with Flask, a simple URL shortener app with QR code image generation.
+Built with Flask, rejus.link is a simple URL shortener app with QR code image generation.
 
-Running live on ...
+Running live on [rejus.link](https://rejus.link)
+
+Deployed using gunicorn and nginx on an AWS EC2 instance.
 
 ## Technologies
 
@@ -17,9 +19,14 @@ Running live on ...
   - flask-wtf
   - flask-sqlalchemy
   - flask-migrate
-  - qrcode
-  - pytest
-- SQLite
+- qrcode
+- pytest
+- python-dotenv
+- psycopg2-binary
+- PostgreSQL (ElephantSQL)
+- gunicorn
+- nginx
+- AWS
 
 ## Process
 
