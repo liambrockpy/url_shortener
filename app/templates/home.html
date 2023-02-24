@@ -7,7 +7,7 @@
 {% endblock head %}
 {% block content %}
     <div class="home-modal">
-        <h1>URL Shortener</h1>
+        <h1>rejus.link</h1>
 
         <form action="" method="post" novalidate>
             {{form.hidden_tag()}}
@@ -27,7 +27,7 @@
                     <div class="link link-result">
                         <img class="fav" src="https://www.google.com/s2/favicons?domain={{result[1]}}" alt="" />
                         <div class="long-url">{{result[1]}}</div>
-                        <a href="http://localhost:5000/{{result[0]}}" target="_blank" class="short-url">localhost:5000/{{result[0]}}<span class="svg-div"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="black"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></span></a>
+                        <a href="https://rejus.link/{{result[0]}}" target="_blank" class="short-url">rejus.link/{{result[0]}}<span class="svg-div"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="black"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg></span></a>
                     </div>
                     <div class="buttons-container buttons-result">
                         <button class="copy">
